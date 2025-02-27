@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Menu, X, ShoppingCart, Heart, Search, Phone, User } from 'lucide-react';
+import LOGO from '../assets/LOGO.webp';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -15,19 +16,9 @@ const Navbar = () => {
       <div className="bg-white py-2 md:py-3 shadow-sm">
         <div className="max-w-7xl mx-auto flex items-center justify-between px-4 md:px-8 lg:px-12">
           {/* Logo */}
-          <div className="flex items-center">
+          <div className="flex items-center bg-orange-700 rounded-lg py-2">
             <a href="/" className="flex items-center">
-              <div className="relative w-8 h-8 md:w-10 md:h-10 mr-1 md:mr-2">
-                <div className="absolute inset-0 bg-green-600 rounded-full flex items-center justify-center">
-                  <span className="text-white text-xs md:text-sm">🛒</span>
-                </div>
-                <div className="absolute -top-1 -right-1 md:-top-1 md:-right-1">
-                  <div className="bg-green-500 rounded-full p-0.5 md:p-1">
-                    <span className="text-white text-xs">🍃</span>
-                  </div>
-                </div>
-              </div>
-              <span className="text-gray-800 font-bold text-lg md:text-xl lg:text-2xl">MyStore</span>
+              <img src={LOGO} alt="Logo" className="h-8 md:h-10" />
             </a>
           </div>
 
@@ -36,12 +27,12 @@ const Navbar = () => {
             <div className="relative w-full max-w-xs md:max-w-lg lg:max-w-2xl">
               <input
                 type="text"
-                placeholder="Search for products..."
-                className="w-full border border-gray-300 rounded-lg py-1.5 md:py-2 px-3 md:px-4 text-sm md:text-base focus:outline-none focus:ring-2 focus:ring-green-500"
+                placeholder="Search for namkeen..."
+                className="w-full border border-gray-300 rounded-lg py-1.5 md:py-2 px-3 md:px-4 text-sm md:text-base focus:outline-none focus:ring-2 focus:ring-orange-500"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
               />
-              <button className="absolute right-0 top-0 h-full bg-green-600 text-white px-2 md:px-4 rounded-r-lg text-sm md:text-base hover:bg-yellow-500 transition">
+              <button className="absolute right-0 top-0 h-full bg-orange-600 text-white px-2 md:px-4 rounded-r-lg text-sm md:text-base hover:bg-yellow-500 transition">
                 Search
               </button>
             </div>
@@ -51,7 +42,7 @@ const Navbar = () => {
           <div className="flex items-center space-x-2 md:space-x-4">
             {/* Profile Icon */}
             <div className="relative">
-              <a href="/profile" className="text-gray-700 hover:text-green-600 transition">
+              <a href="/profile" className="text-gray-700 hover:text-orange-600 transition">
                 <User size={16} md:size={20} lg:size={24} />
               </a>
             </div>
@@ -59,7 +50,7 @@ const Navbar = () => {
             {/* Login Button */}
             <a
               href="/login"
-              className="text-gray-700 hover:text-green-600 transition text-xs md:text-sm font-medium px-2 md:px-4 py-1 md:py-2 rounded-md border border-gray-300 hover:border-green-600"
+              className="text-gray-700 hover:text-orange-600 transition text-xs md:text-sm font-medium px-2 md:px-4 py-1 md:py-2 rounded-md border border-gray-300 hover:border-orange-600"
             >
               Login
             </a>
@@ -67,7 +58,7 @@ const Navbar = () => {
             {/* Signup Button */}
             <a
               href="/signup"
-              className="text-white bg-green-600 hover:bg-green-700 transition text-xs md:text-sm font-medium px-2 md:px-4 py-1 md:py-2 rounded-md"
+              className="text-white bg-orange-600 hover:bg-orange-700 transition text-xs md:text-sm font-medium px-2 md:px-4 py-1 md:py-2 rounded-md"
             >
               Sign Up
             </a>
@@ -86,10 +77,14 @@ const Navbar = () => {
 
             {/* Desktop navigation links */}
             <div className="hidden md:flex items-center space-x-4 md:space-x-6 lg:space-x-8">
-              <a href="/" className="font-medium text-sm md:text-base hover:text-green-400 transition py-2 md:py-4">Home</a>
+              <a href="/" className="font-medium text-sm md:text-base hover:text-orange-400 transition py-2 md:py-4">Home</a>
 
+              {/* Shop Dropdown */}
               <div className="relative group">
-                <a href="/shop" className="font-medium text-sm md:text-base hover:text-green-400 transition py-2 md:py-4 flex items-center">
+                <a
+                  href="/shop"
+                  className="font-medium text-sm md:text-base hover:text-orange-400 transition py-2 md:py-4 flex items-center"
+                >
                   Shop
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -101,21 +96,49 @@ const Navbar = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                   </svg>
                 </a>
-                <div className="absolute left-0 mt-1 md:mt-2 w-32 md:w-48 bg-white rounded-md shadow-lg hidden group-hover:block z-50">
+
+                <div className="absolute left-0 mt-2 w-32 md:w-48 bg-white rounded-md shadow-lg opacity-0 group-hover:opacity-100 transform group-hover:translate-y-0 translate-y-2 transition-all duration-500 ease-in-out z-50">
                   <div className="py-1">
-                    <a href="/shop/eco-friendly" className="block px-3 py-1 md:px-4 md:py-2 text-gray-800 text-sm hover:bg-green-100">Eco-Friendly</a>
-                    <a href="/shop/organic" className="block px-3 py-1 md:px-4 md:py-2 text-gray-800 text-sm hover:bg-green-100">Organic</a>
-                    <a href="/shop/sustainable" className="block px-3 py-1 md:px-4 md:py-2 text-gray-800 text-sm hover:bg-green-100">Sustainable</a>
+                    <a href="/shop/spicy" className="block px-3 py-2 md:px-4 md:py-3 text-gray-800 text-sm hover:bg-orange-100 transition duration-300">Spicy</a>
+                    <a href="/shop/sweet" className="block px-3 py-2 md:px-4 md:py-3 text-gray-800 text-sm hover:bg-orange-100 transition duration-300">Sweet</a>
+                    <a href="/shop/mixed" className="block px-3 py-2 md:px-4 md:py-3 text-gray-800 text-sm hover:bg-orange-100 transition duration-300">Mixed</a>
                   </div>
                 </div>
               </div>
 
-              <a href="/contact" className="font-medium text-sm md:text-base hover:text-green-400 transition py-2 md:py-4">Contact Us</a>
+              {/* Products Dropdown */}
+              <div className="relative group">
+                <a
+                  href="/products"
+                  className="font-medium text-sm md:text-base hover:text-orange-400 transition py-2 md:py-4 flex items-center"
+                >
+                  Products
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-3 md:h-4 w-3 md:w-4 ml-0.5 md:ml-1"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </a>
+
+                <div className="absolute left-0 mt-2 w-32 md:w-48 bg-white rounded-md shadow-lg opacity-0 group-hover:opacity-100 transform group-hover:translate-y-0 translate-y-2 transition-all duration-500 ease-in-out z-50">
+                  <div className="py-1">
+                    <a href="/products/sev" className="block px-3 py-2 md:px-4 md:py-3 text-gray-800 text-sm hover:bg-orange-100 transition duration-300">Sev</a>
+                    <a href="/products/mixture" className="block px-3 py-2 md:px-4 md:py-3 text-gray-800 text-sm hover:bg-orange-100 transition duration-300">Mixture</a>
+                    <a href="/products/bhujia" className="block px-3 py-2 md:px-4 md:py-3 text-gray-800 text-sm hover:bg-orange-100 transition duration-300">Bhujia</a>
+                  </div>
+                </div>
+              </div>
+
+              <a href="/contact" className="font-medium text-sm md:text-base hover:text-orange-400 transition py-2 md:py-4">Contact Us</a>
             </div>
 
             {/* Phone number - hidden on mobile */}
             <div className="hidden md:flex items-center">
-              <a href="tel:(323) 576-1942" className="flex items-center text-sm md:text-base hover:text-green-400 transition">
+              <a href="tel:(323) 576-1942" className="flex items-center text-sm md:text-base hover:text-orange-400 transition">
                 <Phone size={16} md:size={18} lg:size={20} className="mr-1 md:mr-2" />
                 <span>(323) 576-1942</span>
               </a>
@@ -132,12 +155,12 @@ const Navbar = () => {
             <div className="relative w-full">
               <input
                 type="text"
-                placeholder="Search for products..."
-                className="w-full border border-gray-300 rounded-lg py-1.5 px-3 text-sm text-gray-800 focus:outline-none focus:ring-2 focus:ring-green-500"
+                placeholder="Search for namkeen..."
+                className="w-full border border-gray-300 rounded-lg py-1.5 px-3 text-sm text-gray-800 focus:outline-none focus:ring-2 focus:ring-orange-500"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
               />
-              <button className="absolute right-0 top-0 h-full bg-green-600 text-white px-2 rounded-r-lg text-sm hover:bg-yellow-500 transition">
+              <button className="absolute right-0 top-0 h-full bg-orange-600 text-white px-2 rounded-r-lg text-sm hover:bg-yellow-500 transition">
                 Search
               </button>
             </div>
@@ -147,36 +170,33 @@ const Navbar = () => {
 
       {/* Mobile navigation menu */}
       <div
-        className={`fixed inset-0 z-50 bg-gray-800 text-white transform ${
-          isMenuOpen ? 'translate-x-0' : '-translate-x-full'
-        } transition-transform duration-300 ease-in-out md:hidden`}
+        className={`fixed inset-0 z-50 bg-gray-800 text-white transform ${isMenuOpen ? 'translate-x-0' : '-translate-x-full'
+          } transition-transform duration-300 ease-in-out md:hidden`}
       >
         <div className="flex justify-between items-center p-3 md:p-4 border-b border-gray-700">
           <a href="/" className="flex items-center">
             <div className="relative w-8 h-8 mr-1 md:mr-2">
-              <div className="absolute inset-0 bg-green-600 rounded-full flex items-center justify-center">
-                <span className="text-white text-xs md:text-sm">🛒</span>
+              <div className="absolute inset-0 bg-orange-600 rounded-full flex items-center justify-center">
+                <span className="text-white text-xs md:text-sm">🥜</span>
               </div>
               <div className="absolute -top-1 -right-1 md:-top-1 md:-right-1">
-                <div className="bg-green-500 rounded-full p-0.5 md:p-1">
-                  <span className="text-white text-xs">🍃</span>
+                <div className="bg-orange-500 rounded-full p-0.5 md:p-1">
+                  <span className="text-white text-xs">🌶️</span>
                 </div>
               </div>
             </div>
-            <span className="text-white font-bold text-lg md:text-xl">MyStore</span>
+            <span className="text-white font-bold text-lg md:text-xl">NamkeenHub</span>
           </a>
           <button onClick={toggleMenu} className="text-white">
             <X size={16} md:size={20} lg:size={24} />
           </button>
         </div>
         <div className="py-4 px-4">
-          <a href="/" className="block py-2 md:py-3 text-sm md:text-base border-b border-gray-700 hover:text-green-400">Home</a>
-          <a href="/about" className="block py-2 md:py-3 text-sm md:text-base border-b border-gray-700 hover:text-green-400">About Us</a>
-          <a href="/shop" className="block py-2 md:py-3 text-sm md:text-base border-b border-gray-700 hover:text-green-400">Shop</a>
-          <a href="/blogs" className="block py-2 md:py-3 text-sm md:text-base border-b border-gray-700 hover:text-green-400">Blogs</a>
-          <a href="/contact" className="block py-2 md:py-3 text-sm md:text-base border-b border-gray-700 hover:text-green-400">Contact Us</a>
+          <a href="/" className="block py-2 md:py-3 text-sm md:text-base border-b border-gray-700 hover:text-orange-400">Home</a>
+          <a href="/shop" className="block py-2 md:py-3 text-sm md:text-base border-b border-gray-700 hover:text-orange-400">Shop</a>
+          <a href="/contact" className="block py-2 md:py-3 text-sm md:text-base border-b border-gray-700 hover:text-orange-400">Contact Us</a>
           <div className="mt-4 md:mt-6">
-            <a href="tel:(323) 576-1942" className="flex items-center py-2 md:py-3 text-sm md:text-base hover:text-green-400">
+            <a href="tel:(323) 576-1942" className="flex items-center py-2 md:py-3 text-sm md:text-base hover:text-orange-400">
               <Phone size={16} md:size={18} lg:size={20} className="mr-1 md:mr-2" />
               <span>(323) 576-1942</span>
             </a>
@@ -192,7 +212,7 @@ const Navbar = () => {
               </a>
               <a href="/cart" className="relative text-white">
                 <ShoppingCart size={16} md:size={20} lg:size={24} />
-                <span className="absolute -top-1 -right-1 md:-top-2 md:-right-2 bg-green-600 text-white text-xs md:text-xs rounded-full w-4 h-4 md:w-5 md:h-5 flex items-center justify-center">
+                <span className="absolute -top-1 -right-1 md:-top-2 md:-right-2 bg-orange-600 text-white text-xs md:text-xs rounded-full w-4 h-4 md:w-5 md:h-5 flex items-center justify-center">
                   3
                 </span>
               </a>

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-
+import LOGO from "../assets/LOGO.webp"
 const Footer = () => {
     const [showScrollButton, setShowScrollButton] = useState(false);
 
@@ -24,7 +24,7 @@ const Footer = () => {
     const scrollToTop = () => {
         window.scrollTo({
             top: 0,
-            behavior: 'smooth'
+            behavior: 'smooth',
         });
     };
 
@@ -34,16 +34,16 @@ const Footer = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     {/* Company Info */}
                     <div className="col-span-1">
-                        <div className="flex items-center mb-4">
-                            <div className="bg-green-600 rounded-full p-2 mr-2">
-                                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
-                                </svg>
+                        <div className="flex items-center justify-center mb-4">
+                            <div className="bg-orange-600 rounded-lg p-2 mr-2">
+                                <a href="/" className="flex items-center">
+                                    <img src={LOGO} alt="Logo" className="h-8 md:h-10" />
+                                </a>
                             </div>
-                            <h2 className="text-2xl font-bold text-gray-700">EcoStore</h2>
+                            {/* <h2 className="text-2xl font-bold text-gray-700">NamkeenHub</h2> */}
                         </div>
                         <p className="text-gray-600 mb-6">
-                            Lorem ipsum dolor sit amet consectetur. Ornare amet enim vel varius purus consequat ultrices. Id mi viverra euismod risus viverra tortor cursus.
+                            Savor the taste of India with our premium namkeen snacks, crafted with tradition and love.
                         </p>
 
                         <div>
@@ -77,12 +77,12 @@ const Footer = () => {
                     <div className="col-span-1">
                         <h3 className="text-lg font-semibold text-gray-700 mb-4">Useful Links</h3>
                         <ul className="space-y-3">
-                            <li><a href="#" className="text-gray-600 hover:text-green-600 transition">Wholesale</a></li>
-                            <li><a href="#" className="text-gray-600 hover:text-green-600 transition">Become a retailer</a></li>
-                            <li><a href="#" className="text-gray-600 hover:text-green-600 transition">Corporate orders</a></li>
-                            <li><a href="#" className="text-gray-600 hover:text-green-600 transition">Affiliates</a></li>
-                            <li><a href="#" className="text-gray-600 hover:text-green-600 transition">F.A.Q.</a></li>
-                            <li><a href="#" className="text-gray-600 hover:text-green-600 transition">Contact</a></li>
+                            <li><a href="#" className="text-gray-600 hover:text-orange-600 transition">Wholesale</a></li>
+                            <li><a href="#" className="text-gray-600 hover:text-orange-600 transition">Become a Retailer</a></li>
+                            <li><a href="#" className="text-gray-600 hover:text-orange-600 transition">Bulk Orders</a></li>
+                            <li><a href="#" className="text-gray-600 hover:text-orange-600 transition">Affiliates</a></li>
+                            <li><a href="#" className="text-gray-600 hover:text-orange-600 transition">F.A.Q.</a></li>
+                            <li><a href="#" className="text-gray-600 hover:text-orange-600 transition">Contact</a></li>
                         </ul>
                     </div>
 
@@ -90,11 +90,11 @@ const Footer = () => {
                     <div className="col-span-1">
                         <h3 className="text-lg font-semibold text-gray-700 mb-4">Quick Links</h3>
                         <ul className="space-y-3">
-                            <li><a href="#" className="text-gray-600 hover:text-green-600 transition">About us</a></li>
-                            <li><a href="#" className="text-gray-600 hover:text-green-600 transition">Blogs</a></li>
-                            <li><a href="#" className="text-gray-600 hover:text-green-600 transition">Shop</a></li>
-                            <li><a href="#" className="text-gray-600 hover:text-green-600 transition">Find a store</a></li>
-                            <li><a href="#" className="text-gray-600 hover:text-green-600 transition">Privacy Policy</a></li>
+                            <li><a href="#" className="text-gray-600 hover:text-orange-600 transition">About Us</a></li>
+                            <li><a href="#" className="text-gray-600 hover:text-orange-600 transition">Recipes</a></li>
+                            <li><a href="#" className="text-gray-600 hover:text-orange-600 transition">Shop</a></li>
+                            <li><a href="#" className="text-gray-600 hover:text-orange-600 transition">Find a Store</a></li>
+                            <li><a href="#" className="text-gray-600 hover:text-orange-600 transition">Privacy Policy</a></li>
                         </ul>
                     </div>
 
@@ -103,20 +103,44 @@ const Footer = () => {
                         <h3 className="text-lg font-semibold text-gray-700 mb-4">Contact Us</h3>
                         <div className="space-y-4 mb-6">
                             <div className="flex items-center">
-                                <div className="mr-3 text-green-600">
-                                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                <div className="mr-3 text-orange-600">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        className="h-5 w-5"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke="currentColor"
+                                    >
+                                        <path
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
+                                            strokeWidth={2}
+                                            d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                                        />
                                     </svg>
                                 </div>
-                                <a href="tel:+001123456987" className="text-green-600 font-medium">+001 123 456 987</a>
+                                <a href="tel:+911234567890" className="text-orange-600 font-medium">+91 123 456 7890</a>
                             </div>
                             <div className="flex items-center">
                                 <div className="mr-3 text-gray-600">
-                                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        className="h-5 w-5"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke="currentColor"
+                                    >
+                                        <path
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
+                                            strokeWidth={2}
+                                            d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                                        />
                                     </svg>
                                 </div>
-                                <a href="mailto:exampleinfo@gmail.com" className="text-gray-600 hover:text-green-600 transition">exampleinfo@gmail.com</a>
+                                <a href="mailto:info@namkeenhub.com" className="text-gray-600 hover:text-orange-600 transition">
+                                    info@mahendranamkeen.com
+                                </a>
                             </div>
                         </div>
 
@@ -126,10 +150,16 @@ const Footer = () => {
                                 <input
                                     type="email"
                                     placeholder="Enter Your Email"
-                                    className="flex-grow p-3 border border-gray-300 rounded-l focus:outline-none focus:ring-1 focus:ring-green-500"
+                                    className="flex-grow p-3 border border-gray-300 rounded-l focus:outline-none focus:ring-1 focus:ring-orange-500"
                                 />
-                                <button className="bg-yellow-400 hover:bg-yellow-500 text-white p-3 rounded-r transition">
-                                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <button className="bg-orange-600 hover:bg-orange-700 text-white p-3 rounded-r transition">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        className="h-6 w-6"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke="currentColor"
+                                    >
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                                     </svg>
                                 </button>
@@ -140,17 +170,26 @@ const Footer = () => {
 
                 {/* Copyright Section */}
                 <div className="border-t border-gray-200 mt-12 pt-6 text-center md:text-left md:flex md:justify-center md:items-center">
-                    <p className="text-gray-600">@2024 All Rights Copyright <span className="text-green-600 font-semibold">EcoStore</span>
-                        Design & Developed By <span className="text-green-600 font-semibold">UIPARADOX</span></p>
+                    <p className="text-gray-600">
+                        @2024 All Rights Copyright <span className="text-orange-600 font-semibold">MAHENDRA NAMKEEN </span>
+                        Design & Developed By <span className="text-orange-600 font-semibold">WEBSEEDER</span>
+                    </p>
                 </div>
             </div>
 
             {/* Sticky Back to Top Button */}
             <button
                 onClick={scrollToTop}
-                className={`fixed bottom-8 right-8 bg-green-600 hover:bg-green-700 text-white p-3 rounded-full shadow-lg transition-opacity duration-300 ${showScrollButton ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
+                className={`fixed bottom-8 right-8 bg-orange-600 hover:bg-orange-700 text-white p-3 rounded-full shadow-lg transition-opacity duration-300 ${showScrollButton ? 'opacity-100' : 'opacity-0 pointer-events-none'
+                    }`}
             >
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-6 w-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                >
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 10l7-7m0 0l7 7m-7-7v18" />
                 </svg>
             </button>

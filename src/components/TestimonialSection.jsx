@@ -77,7 +77,7 @@ const TestimonialSection = () => {
                 <button
                     key={i}
                     onClick={() => handleDotClick(i)}
-                    className={`w-4 h-4 mx-1 rounded-full border border-green-700 ${i === activeIndex ? 'bg-green-600' : 'bg-white'}`}
+                    className={`w-4 h-4 mx-1 rounded-full border border-orange-700 ${i === activeIndex ? 'bg-orange-600' : 'bg-white'}`}
                     aria-label={`Go to slide ${i + 1}`}
                 />
             );

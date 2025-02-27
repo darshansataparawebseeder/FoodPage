@@ -1,54 +1,54 @@
 import React from 'react';
-import food1 from '../assets/food1.png';
-import food2 from '../assets/food2.png';
-import food3 from '../assets/food3.png';
-import food4 from '../assets/food4.png';
-import food5 from '../assets/food5.png';
-import food6 from '../assets/food6.png';
+import sev from '../assets/sev.jpg'; // Replace with actual Namkeen images
+import mixture from '../assets/mixture.jpeg';
+import bhujia from '../assets/bhujia.jpeg';
+import chivda from '../assets/chivda.jpeg';
+import farsan from '../assets/farsan.jpeg';
+import namkeenmix from '../assets/namkeenmix.jpg';
 
 const PopularCategories = () => {
     const categories = [
         {
-            name: 'Egg',
-            image: food1,
+            name: 'Sev',
+            image: sev,
         },
         {
-            name: 'Vegetables',
-            image: food2,
+            name: 'Mixture',
+            image: mixture,
         },
         {
-            name: 'Cooking Oil',
-            image: food3,
+            name: 'Bhujia',
+            image: bhujia,
         },
         {
-            name: 'Fruits',
-            image: food4,
+            name: 'Chivda',
+            image: chivda,
         },
         {
-            name: 'Grains & Pasta',
-            image: food5,
+            name: 'Farsan',
+            image: farsan,
         },
         {
-            name: 'Fresh Meat',
-            image: food6,
+            name: 'Namkeen Mix',
+            image: namkeenmix,
         },
     ];
 
     return (
         <div className="container mx-auto flex flex-col justify-center px-4 sm:px-6 md:px-8 lg:px-10">
-            <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800 mb-2 sm:mb-3 md:mb-4">Popular Categories</h1>
+            <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800 mb-2 sm:mb-3 md:mb-4">Popular Namkeen Categories</h1>
 
             <p className="text-gray-600 text-sm sm:text-base mb-4 sm:mb-6 md:mb-8">
-                Lorem ipsum dolor sit amet consectetur. Tortor nunc mauris arcu tristique massa nisi in non ante.
+                Explore our delicious range of authentic Indian namkeen snacks, crafted with tradition and taste in mind.
             </p>
 
-            <div className="grid grid-cols-2  md:grid-cols-3 lg:grid-cols-6 gap-2 sm:gap-3 md:gap-4">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-2 sm:gap-3 md:gap-4">
                 {categories.map((category, index) => (
                     <div
                         key={index}
                         className="bg-white border border-gray-200 rounded-lg p-2 sm:p-3 md:p-4 flex flex-col items-center hover:shadow-md transition-shadow duration-300"
                     >
-                        <div className="bg-gray-100 rounded-lg w-full mb-2 sm:mb-3 md:mb-4 p-2 sm:p-3 md:p-4 flex items-center justify-center">
+                        <div className=" rounded-lg border border-orange-100 w-full mb-2 sm:mb-3 md:mb-4 p-2 sm:p-3 md:p-4 flex items-center justify-center">
                             <img
                                 src={category.image}
                                 alt={category.name}

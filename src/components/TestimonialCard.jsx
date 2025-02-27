@@ -15,7 +15,7 @@ const TestimonialCard = ({ image, name, role, rating, text }) => {
   };
 
   return (
-    <div className="border border-gray-200 rounded-lg p-6 relative">
+    <div className="border border-orange-700 bg-orange-100 rounded-lg p-6 relative">
       <div className="flex items-center mb-4">
         <img
           src={image}
