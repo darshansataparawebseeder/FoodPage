@@ -62,7 +62,7 @@ const PromotionalBanners = () => {
                         {/* Product image */}
                         <div className="absolute top-0 right-0 bg-cover w-1/2 h-full flex items-center justify-end">
                             <img
-                                src={namkeenBanner3}
+                                src={namkeenBanner2}
                                 alt="Spicy Bhujia"
                                 className=" lg:pr-5 rounded-lg h-24 sm:h-32 md:h-40"
                             />
@@ -89,7 +89,7 @@ const PromotionalBanners = () => {
                         {/* Product image */}
                         <div className="absolute top-0  right-0 w-1/2 h-full flex items-center justify-end">
                             <img
-                                src={namkeenBanner2}
+                                src={namkeenBanner3}
                                 alt="Crispy Sev"
                                 className=" rounded-lg lg:pr-5 h-24 sm:h-32 md:h-40"
                             />

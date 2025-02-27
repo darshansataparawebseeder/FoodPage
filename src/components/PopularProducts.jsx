@@ -126,9 +126,9 @@ const PopularProducts = () => {
                     <div key={product.id} className="border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition-shadow duration-300">
                         {/* Product Image with Discount Badge */}
                         <div className="relative  p-4">
-                            <div className="absolute top-2 left-2 bg-orange-600 text-white font-medium px-2 py-1 rounded-sm">
+                            {/* <div className="absolute top-2 left-2 bg-orange-600 text-white font-medium px-2 py-1 rounded-sm">
                                 -{product.discount}%
-                            </div>
+                            </div> */}
                             <img
                                 src={product.image}
                                 alt={product.name}

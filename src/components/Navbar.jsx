@@ -126,9 +126,30 @@ const Navbar = () => {
 
                 <div className="absolute left-0 mt-2 w-32 md:w-48 bg-white rounded-md shadow-lg opacity-0 group-hover:opacity-100 transform group-hover:translate-y-0 translate-y-2 transition-all duration-500 ease-in-out z-50">
                   <div className="py-1">
-                    <a href="/products/sev" className="block px-3 py-2 md:px-4 md:py-3 text-gray-800 text-sm hover:bg-orange-100 transition duration-300">Sev</a>
-                    <a href="/products/mixture" className="block px-3 py-2 md:px-4 md:py-3 text-gray-800 text-sm hover:bg-orange-100 transition duration-300">Mixture</a>
-                    <a href="/products/bhujia" className="block px-3 py-2 md:px-4 md:py-3 text-gray-800 text-sm hover:bg-orange-100 transition duration-300">Bhujia</a>
+                    <a href="/products/bhujia" className="block px-3 py-2 md:px-4 md:py-3 text-gray-800 text-sm hover:bg-orange-100 transition duration-300">
+                      Sev
+                    </a>
+                    <a href="/products/bhujia" className="block px-3 py-2 md:px-4 md:py-3 text-gray-800 text-sm hover:bg-orange-100 transition duration-300">
+                      Mixture
+                    </a>
+                    <a href="/products/bhujia" className="block px-3 py-2 md:px-4 md:py-3 text-gray-800 text-sm hover:bg-orange-100 transition duration-300">
+                      Dal & Nuts
+                    </a>
+                    <a href="/products/bhujia" className="block px-3 py-2 md:px-4 md:py-3 text-gray-800 text-sm hover:bg-orange-100 transition duration-300">
+                      Fariyali
+                    </a>
+                    <a href="/products/bhujia" className="block px-3 py-2 md:px-4 md:py-3 text-gray-800 text-sm hover:bg-orange-100 transition duration-300">
+                      Bhel
+                    </a>
+                    <a href="/products/bhujia" className="block px-3 py-2 md:px-4 md:py-3 text-gray-800 text-sm hover:bg-orange-100 transition duration-300">
+                      Nukti Mix
+                    </a>
+                    <a href="/products/bhujia" className="block px-3 py-2 md:px-4 md:py-3 text-gray-800 text-sm hover:bg-orange-100 transition duration-300">
+                      Gathiya Papdi
+                    </a>
+                    <a href="/products/bhujia" className="block px-3 py-2 md:px-4 md:py-3 text-gray-800 text-sm hover:bg-orange-100 transition duration-300">
+                      Masala Snacks
+                    </a>
                   </div>
                 </div>
               </div>
@@ -194,6 +215,7 @@ const Navbar = () => {
         <div className="py-4 px-4">
           <a href="/" className="block py-2 md:py-3 text-sm md:text-base border-b border-gray-700 hover:text-orange-400">Home</a>
           <a href="/shop" className="block py-2 md:py-3 text-sm md:text-base border-b border-gray-700 hover:text-orange-400">Shop</a>
+          <a href="/products" className="block py-2 md:py-3 text-sm md:text-base border-b border-gray-700 hover:text-orange-400">Products</a>
           <a href="/contact" className="block py-2 md:py-3 text-sm md:text-base border-b border-gray-700 hover:text-orange-400">Contact Us</a>
           <div className="mt-4 md:mt-6">
             <a href="tel:(323) 576-1942" className="flex items-center py-2 md:py-3 text-sm md:text-base hover:text-orange-400">
