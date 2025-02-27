@@ -7,11 +7,6 @@ const HeroSection = () => {
     // Array of feature data
     const features = [
         {
-            icon: Truck,
-            title: 'Fast Delivery',
-            description: 'Across India',
-        },
-        {
             icon: ShieldCheck,
             title: 'Safe Payment',
             description: '100% Secure Payment',
@@ -60,7 +55,7 @@ const HeroSection = () => {
                         <img
                             src={heroImage}
                             alt="Assortment of crispy Indian namkeen snacks"
-                            className="max-w-full h-auto w-64 md:w-96 lg:w-[480px]"
+                            className="max-w-full rounded-xl h-auto w-64 md:w-96 lg:w-[480px]"
                         />
                     </div>
                 </div>
@@ -69,7 +64,7 @@ const HeroSection = () => {
             {/* Features Section */}
             <div className="py-8 md:py-12 px-4">
                 <div className="max-w-7xl mx-auto">
-                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4">
                         {features.map((feature, index) => (
                             <FeatureCard
                                 key={index}
