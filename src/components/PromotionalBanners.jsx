@@ -11,7 +11,7 @@ const PromotionalBanners = () => {
             <div className="flex flex-col lg:flex-row gap-4 lg:gap-6">
                 {/* Large banner - Authentic Namkeen */}
                 <div
-                    className="w-full lg:w-3/5 sm:h-[350px] md:h-[480px] lg:h-[70vh] relative overflow-hidden rounded-lg"
+                    className="w-full lg:w-3/5 h-[280px] sm:h-[350px] md:h-[480px] lg:h-[70vh] relative overflow-hidden rounded-lg"
                     style={{
                         backgroundImage: `url(${waveBackground})`,
                         backgroundSize: 'cover',
@@ -20,7 +20,7 @@ const PromotionalBanners = () => {
                     }}
                 >
                     {/* Content container */}
-                    <div className="relative z-20 p-4 sm:p-6 md:p-8 flex flex-col items-center text-center h-full">
+                    <div className="relative z-20 p-4 sm:p-6 md:p-8 flex flex-col items-center text-center h-[50%] md:h-[50%] lg:h-[50%]">
 
                         <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-2 sm:mb-3">Authentic Namkeen</h2>
                         <p className="text-gray-800  text-sm sm:text-base mb-4 sm:mb-6">Crispy snacks delivered fresh to your door</p>
@@ -30,20 +30,20 @@ const PromotionalBanners = () => {
                     </div>
 
                     {/* Product image container */}
-                    <div className="absolute bottom-0 left-0 right-0 flex items-center justify-center z-10">
+                    <div className="absolute bottom-0  left-0 right-0 flex items-center justify-center z-10 h-[50%] md:h-[50%] lg:h-[50%] ">
                         <img
                             src={namkeenBanner1}
                             alt="Assorted Namkeen Platter"
-                            className=" lg:pb-2 h-40 rounded-lg sm:h-48 md:h-64 lg:h-60"
+                            className=" lg:pb-2  h-40 rounded-lg sm:h-48 md:h-64 lg:h-60"
                         />
                     </div>
                 </div>
 
                 {/* Right column with two smaller banners */}
-                <div className="w-full lg:w-1/2 lg:h-[70vh] flex flex-col gap-4 lg:gap-6">
+                <div className="w-full lg:w-1/2 lg:h-[70vh] h-[35vh] flex flex-col gap-4 lg:gap-6">
                     {/* Spicy Deals */}
                     <div
-                        className="relative overflow-hidden rounded-lg lg:h-[50%]"
+                        className="relative overflow-hidden rounded-lg h-[50%] lg:h-[50%]"
                         style={{
                             backgroundImage: `url(${waveBackground})`,
                             backgroundSize: 'cover',
@@ -71,7 +71,7 @@ const PromotionalBanners = () => {
 
                     {/* Crunchy Picks */}
                     <div
-                        className="relative overflow-hidden rounded-lg lg:h-[50%]"
+                        className="relative overflow-hidden rounded-lg h-[50%] lg:h-[50%]"
                         style={{
                             backgroundImage: `url(${waveBackground})`,
                             backgroundSize: 'cover',

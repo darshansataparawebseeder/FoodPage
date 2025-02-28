@@ -86,7 +86,7 @@ const TestimonialSection = () => {
     };
 
     return (
-        <div className="max-w-7xl mx-auto px-4 py-16">
+        <div className="max-w-7xl mx-auto px-4 pb-6 py-4">
             {/* Header */}
             <div className="text-left mb-12">
                 <h2 className="text-4xl font-bold text-gray-800 mb-4">Client Testimonial</h2>
@@ -96,7 +96,7 @@ const TestimonialSection = () => {
             </div>
 
             {/* Testimonial Cards */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-6">
                 {visibleTestimonials.map((testimonial) => (
                     <TestimonialCard
                         key={testimonial.id}

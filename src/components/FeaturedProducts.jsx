@@ -158,22 +158,22 @@ const FeaturedProducts = () => {
 
               {/* Quantity and Add to Cart */}
               <div className="flex items-center">
-                <div className="flex items-center border border-gray-300 rounded-md mr-1 sm:mr-2">
+                <div className="flex items-center border border-gray-300 rounded-md mr-2">
                   <button
-                    className="px-1 sm:px-2 py-1 text-gray-600 text-xs sm:text-sm hover:bg-gray-100"
+                    className="px-3 py-1 text-gray-600 hover:bg-gray-100"
                     onClick={() => updateQuantity(product.id, -1)}
                   >
                     −
                   </button>
-                  <span className="px-2 py-1 text-xs sm:text-sm">{quantities[product.id]}</span>
+                  <span className="px-3 py-1">{quantities[product.id]}</span>
                   <button
-                    className="px-1 sm:px-2 py-1 text-gray-600 text-xs sm:text-sm hover:bg-gray-100"
+                    className="px-3 py-1 text-gray-600 hover:bg-gray-100"
                     onClick={() => updateQuantity(product.id, 1)}
                   >
                     +
                   </button>
                 </div>
-                <button className="flex-1 bg-orange-600 hover:bg-orange-700 text-white text-xs sm:text-sm py-1 sm:py-2 px-2 sm:px-4 rounded-md transition-colors">
+                <button className="flex-1 bg-orange-600 hover:bg-orange-700 text-white py-2 px-4 rounded-md transition-colors">
                   Add to Cart
                 </button>
               </div>

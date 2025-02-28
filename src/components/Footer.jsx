@@ -47,7 +47,7 @@ const Footer = () => {
 
                     {/* Useful Links */}
                     <div className="col-span-1">
-                        <h3 className="text-lg font-semibold text-gray-700 mb-4 border-b border-orange-400 pb-2">Useful Links</h3>
+                        <h3 className="text-lg font-semibold text-gray-700 mb-4 border-b border-orange-400 pb-2">Product Categories</h3>
                         <ul className="space-y-3">
                             <li><a href="#" className="text-gray-600 hover:text-orange-600 transition">Sev</a></li>
                             <li><a href="#" className="text-gray-600 hover:text-orange-600 transition">Mixture</a></li>
